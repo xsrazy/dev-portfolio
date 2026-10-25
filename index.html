@@ -42,7 +42,6 @@ button.toggle{border:1px solid var(--line);background:var(--card);color:var(--te
 .tag{font-size:12px;font-weight:700;letter-spacing:.04em;text-transform:uppercase;color:var(--accent)}
 .card h2{font-size:20px;margin:0}
 .card p{margin:0;color:var(--muted);font-size:15px;line-height:1.5;flex-grow:1}
-.domain{font-size:13px;color:var(--muted);word-break:break-all}
 .visit{display:inline-block;margin-top:4px;background:var(--accent);color:#fff;text-decoration:none;font-weight:700;font-size:14px;padding:9px 18px;border-radius:999px}
 .visit:hover{text-decoration:none;opacity:.88}
 .row{display:flex;gap:10px;align-items:center;flex-wrap:wrap}
@@ -143,13 +142,12 @@ projects.forEach(function(p){
   var tag = document.createElement("div"); tag.className = "tag"; tag.textContent = p.c;
   var h2 = document.createElement("h2"); h2.textContent = p.t;
   var desc = document.createElement("p"); desc.textContent = p.x;
-  var dom = document.createElement("div"); dom.className = "domain"; dom.textContent = p.d;
   var a = document.createElement("a"); a.className = "visit"; a.href = p.u; a.target = "_blank"; a.rel = "noopener"; a.textContent = "Visit site \u2192";
   var row = document.createElement("div"); row.className = "row";
   var pv = document.createElement("button"); pv.type = "button"; pv.className = "preview"; pv.textContent = "Preview";
   pv.addEventListener("click", function(){ openPreview(p); });
   row.appendChild(a); row.appendChild(pv);
-  body.appendChild(tag); body.appendChild(h2); body.appendChild(desc); body.appendChild(dom); body.appendChild(row);
+  body.appendChild(tag); body.appendChild(h2); body.appendChild(desc); body.appendChild(row);
   card.appendChild(thumb); card.appendChild(body);
   grid.appendChild(card);
 });
