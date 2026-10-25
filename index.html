@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Rahmatul Usra (@xsrazy) — Developer Portfolio</title>
+<meta name="description" content="Developer portfolio of Rahmatul Usra (@xsrazy): 16 live websites across wedding invitations, web tools, temp mail, stores, recipes, developer tools, and design.">
+<style>
+:root{
+  --bg:#f6f4ef; --card:#ffffff; --text:#1c1a17; --muted:#6b6560;
+  --line:#e5e0d8; --accent:#ff5c1a; --tag-bg:#f1ede6; --thumb-bg:linear-gradient(135deg,#2b2b2b,#4a4a4a);
+}
+body.dark{
+  --bg:#141210; --card:#1e1b18; --text:#f2efe9; --muted:#a89f94;
+  --line:#2e2a26; --accent:#ff7a3d; --tag-bg:#2a251f; --thumb-bg:linear-gradient(135deg,#2b2b2b,#4a4a4a);
+}
+*{box-sizing:border-box}
+body{margin:0;font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;background:var(--bg);color:var(--text)}
+a{color:inherit}
+.wrap{max-width:1100px;margin:0 auto;padding:32px 20px 64px}
+header{display:flex;flex-wrap:wrap;gap:16px;align-items:flex-end;justify-content:space-between;margin-bottom:8px}
+h1{font-size:40px;line-height:1.1;margin:0}
+h1 span{color:var(--accent)}
+.sub{color:var(--muted);font-size:17px;margin-top:8px;max-width:640px}
+.handle{font-size:15px;color:var(--muted)}
+.handle a{color:var(--accent);text-decoration:none;font-weight:600}
+button.toggle{border:1px solid var(--line);background:var(--card);color:var(--text);border-radius:999px;padding:8px 14px;cursor:pointer;font-size:14px}
+.stats{display:flex;gap:12px;margin:20px 0;flex-wrap:wrap}
+.stat{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:12px 18px}
+.stat b{font-size:22px;display:block}
+.stat span{color:var(--muted);font-size:13px}
+.chips{display:flex;gap:8px;flex-wrap:wrap;margin:20px 0 24px}
+.chip{border:1px solid var(--line);background:var(--card);color:var(--text);border-radius:999px;padding:8px 14px;cursor:pointer;font-size:14px}
+.chip.active{background:var(--text);color:var(--bg);border-color:var(--text)}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:18px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:18px;overflow:hidden;display:flex;flex-direction:column}
+.thumb{position:relative;aspect-ratio:4/3;background:var(--thumb-bg);display:flex;align-items:center;justify-content:center;overflow:hidden}
+.thumb span{color:#f2efe9;font-weight:700;font-size:15px;padding:0 16px;text-align:center;word-break:break-all}
+.thumb img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.thumb img.fb{object-fit:contain;padding:15%}
+.body{padding:16px;display:flex;flex-direction:column;gap:8px;flex-grow:1}
+.tag{font-size:12px;font-weight:700;letter-spacing:.04em;text-transform:uppercase;color:var(--accent)}
+.card h2{font-size:20px;margin:0}
+.card p{margin:0;color:var(--muted);font-size:15px;line-height:1.5;flex-grow:1}
+.domain{font-size:13px;color:var(--muted);word-break:break-all}
+.visit{margin-top:4px;font-weight:700;color:var(--accent);text-decoration:none}
+.visit:hover{text-decoration:underline}
+.row{display:flex;gap:14px;align-items:center}
+.preview{background:none;border:0;color:var(--accent);font-weight:700;font-size:15px;cursor:pointer;padding:0;font-family:inherit}
+.preview:hover{text-decoration:underline}
+.modal-overlay{position:fixed;inset:0;background:rgba(0,0,0,.7);display:none;align-items:center;justify-content:center;z-index:999;padding:16px}
+.modal-overlay.open{display:flex}
+.modal{background:var(--card);border-radius:18px;width:min(960px,96vw);height:min(85vh,820px);display:flex;flex-direction:column;overflow:hidden;box-shadow:0 24px 64px rgba(0,0,0,.4)}
+.modal-bar{display:flex;align-items:center;gap:12px;padding:12px 16px;border-bottom:1px solid var(--line)}
+.modal-bar b{flex-grow:1;font-size:16px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.modal-bar a{color:var(--accent);font-weight:700;text-decoration:none;font-size:14px;white-space:nowrap}
+.modal-bar a:hover{text-decoration:underline}
+.modal-bar button{border:1px solid var(--line);background:var(--card);color:var(--text);border-radius:999px;padding:6px 12px;cursor:pointer;font-size:14px}
+.modal iframe{flex-grow:1;width:100%;border:0;background:#fff}
+@media(max-width:560px){.modal{width:96vw;height:92vh}}
+footer{margin-top:48px;color:var(--muted);font-size:14px;text-align:center}
+@media(max-width:560px){h1{font-size:32px}}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <div>
+      <h1>Rahmatul Usra <span>@xsrazy</span></h1>
+      <div class="sub">Developer portfolio. 16 live websites I built and shipped, from wedding invitations to web tools, stores, and developer utilities.</div>
+      <div class="handle" style="margin-top:8px"><a href="https://github.com/xsrazy" target="_blank" rel="noopener">GitHub</a> &middot; <a href="https://iam.xsrazy.web.id" target="_blank" rel="noopener">Full CV</a></div>
+    </div>
+    <button class="toggle" id="themeBtn" type="button">Dark mode</button>
+  </header>
+
+  <div class="stats">
+    <div class="stat"><b>16</b><span>live projects</span></div>
+    <div class="stat"><b>7</b><span>categories</span></div>
+  </div>
+
+  <div class="chips" id="chips">
+    <button class="chip active" type="button" data-filter="all">All (16)</button>
+    <button class="chip" type="button" data-filter="Wedding invitations">Wedding invitations (6)</button>
+    <button class="chip" type="button" data-filter="Web tools and apps">Web tools and apps (4)</button>
+    <button class="chip" type="button" data-filter="Temp mail">Temp mail (1)</button>
+    <button class="chip" type="button" data-filter="Store and catalog">Store and catalog (2)</button>
+    <button class="chip" type="button" data-filter="Recipes">Recipes (1)</button>
+    <button class="chip" type="button" data-filter="Developer">Developer (1)</button>
+    <button class="chip" type="button" data-filter="Design">Design (1)</button>
+  </div>
+
+  <div class="grid" id="grid"></div>
+
+  <footer>Built by Rahmatul Usra (@xsrazy). All projects link to their live sites.</footer>
+</div>
+
+<script>
+var projects = [
+  {t:"NikahPee", img:"thumbs/nikahpee.png", d:"nikahpee.xsrazy.web.id", u:"https://nikahpee.xsrazy.web.id", c:"Wedding invitations", x:"Shopee-style wedding invitation for Usra & Zee."},
+  {t:"NikahTube", img:"thumbs/nikahtube.png", d:"nikahtube.xsrazy.web.id", u:"https://nikahtube.xsrazy.web.id", c:"Wedding invitations", x:"YouTube-style wedding invitation, free and open source."},
+  {t:"Wedify", img:"thumbs/wedify.png", d:"wedify.xsrazy.web.id", u:"https://wedify.xsrazy.web.id", c:"Wedding invitations", x:"Spotify-style wedding invitation, free and open source."},
+  {t:"samaWA", img:"thumbs/samawa.png", d:"samawa.xsrazy.web.id", u:"https://samawa.xsrazy.web.id", c:"Wedding invitations", x:"WhatsApp-style wedding invitation for Usra & Zee."},
+  {t:"Nikah", img:"thumbs/nikah.png", d:"nikah.xsrazy.web.id", u:"https://nikah.xsrazy.web.id", c:"Wedding invitations", x:"Classic digital wedding invitation for Usra & Zee."},
+  {t:"NikahFix", img:"thumbs/nikahfix.png", d:"nikahfix.xsrazy.web.id", u:"https://nikahfix.xsrazy.web.id", c:"Wedding invitations", x:"Netflix-style wedding invitation."},
+  {t:"LinkPass", img:"thumbs/linkpass.png", d:"linkpass.xsrazy.web.id", u:"https://linkpass.xsrazy.web.id", c:"Web tools and apps", x:"Free open-source link-in-bio generator with a digital pass concept."},
+  {t:"TikBulk", img:"thumbs/tikbulk.png", d:"tikbulk.xsrazy.web.id", u:"https://tikbulk.xsrazy.web.id", c:"Web tools and apps", x:"Bulk TikTok video downloader, no watermark."},
+  {t:"Tools", img:"thumbs/tools.png", d:"tools.xsrazy.web.id", u:"https://tools.xsrazy.web.id", c:"Web tools and apps", x:"1,108 free micro tools that run entirely in the browser."},
+  {t:"CekTag", img:"thumbs/cektag.png", d:"cektag.xsrazy.web.id", u:"https://cektag.xsrazy.web.id", c:"Web tools and apps", x:"GetContact tag checker for unknown numbers."},
+  {t:"TMail", img:"thumbs/tmail.png", d:"tmail.xsrazy.web.id", u:"https://tmail.xsrazy.web.id", c:"Temp mail", x:"Free temporary email, no sign-up, auto-deletes in 24 hours."},
+  {t:"myrobs.store", img:"thumbs/myrobs-store.png", d:"myrobs.store", u:"https://myrobs.store", c:"Store and catalog", x:"Roblox services store."},
+  {t:"FMCreators Marketplace", img:"thumbs/fmc.png", d:"fmc.xsrazy.web.id", u:"https://fmc.xsrazy.web.id", c:"Store and catalog", x:"Curated Roblox clothing catalog."},
+  {t:"Masakan Kekinian", d:"msknkkn.xsrazy.web.id", u:"https://msknkkn.xsrazy.web.id", c:"Recipes", x:"Recipe discovery site."},
+  {t:"GitHub Readme Stats", img:"thumbs/github-readme-stats.png", d:"github-readme-stats.xsrazy.web.id", u:"https://github-readme-stats.xsrazy.web.id", c:"Developer", x:"Self-hosted GitHub profile card suite: graph, stats, streak, languages, trophy."},
+  {t:"ShareCanva", d:"sharecanva.com", u:"https://sharecanva.com", c:"Design", x:"Free monthly Canva Pro invite links."}
+];
+
+function shot(u){ return "https://s.wordpress.com/mshots/v1/" + encodeURIComponent(u) + "?w=800"; }
+function fav(d){ return "https://www.google.com/s2/favicons?domain=" + d + "&sz=128"; }
+
+var grid = document.getElementById("grid");
+projects.forEach(function(p){
+  var card = document.createElement("article");
+  card.className = "card";
+  card.setAttribute("data-cat", p.c);
+  var img = document.createElement("img");
+  img.alt = p.t + " preview";
+  img.loading = "lazy";
+  img.src = p.img || shot(p.u);
+  img.onerror = function(){
+    if (p.img && !img.dataset.ms){ img.dataset.ms = "1"; img.src = shot(p.u); }
+    else if (!img.dataset.fb){ img.dataset.fb = "1"; img.classList.add("fb"); img.src = fav(p.d); }
+    else { img.style.display = "none"; }
+  };
+  var thumb = document.createElement("div");
+  thumb.className = "thumb";
+  var label = document.createElement("span");
+  label.textContent = p.d;
+  thumb.appendChild(label);
+  thumb.appendChild(img);
+  var body = document.createElement("div");
+  body.className = "body";
+  body.innerHTML = "";
+  var tag = document.createElement("div"); tag.className = "tag"; tag.textContent = p.c;
+  var h2 = document.createElement("h2"); h2.textContent = p.t;
+  var desc = document.createElement("p"); desc.textContent = p.x;
+  var dom = document.createElement("div"); dom.className = "domain"; dom.textContent = p.d;
+  var a = document.createElement("a"); a.className = "visit"; a.href = p.u; a.target = "_blank"; a.rel = "noopener"; a.textContent = "Visit site \u2192";
+  var row = document.createElement("div"); row.className = "row";
+  var pv = document.createElement("button"); pv.type = "button"; pv.className = "preview"; pv.textContent = "Preview";
+  pv.addEventListener("click", function(){ openPreview(p); });
+  row.appendChild(a); row.appendChild(pv);
+  body.appendChild(tag); body.appendChild(h2); body.appendChild(desc); body.appendChild(dom); body.appendChild(row);
+  card.appendChild(thumb); card.appendChild(body);
+  grid.appendChild(card);
+});
+
+var overlay = document.createElement("div"); overlay.className = "modal-overlay";
+var modal = document.createElement("div"); modal.className = "modal";
+var bar = document.createElement("div"); bar.className = "modal-bar";
+var mTitle = document.createElement("b");
+var mOpen = document.createElement("a"); mOpen.target = "_blank"; mOpen.rel = "noopener"; mOpen.textContent = "Open in new tab \u2192";
+var mClose = document.createElement("button"); mClose.type = "button"; mClose.textContent = "Close";
+var frame = document.createElement("iframe"); frame.title = "Project preview";
+bar.appendChild(mTitle); bar.appendChild(mOpen); bar.appendChild(mClose);
+modal.appendChild(bar); modal.appendChild(frame);
+overlay.appendChild(modal);
+document.body.appendChild(overlay);
+function openPreview(p){
+  mTitle.textContent = p.t + " \u2014 " + p.d;
+  mOpen.href = p.u;
+  frame.src = p.u;
+  overlay.classList.add("open");
+  document.body.style.overflow = "hidden";
+}
+function closePreview(){
+  overlay.classList.remove("open");
+  frame.src = "about:blank";
+  document.body.style.overflow = "";
+}
+mClose.addEventListener("click", closePreview);
+overlay.addEventListener("click", function(e){ if (e.target === overlay) closePreview(); });
+document.addEventListener("keydown", function(e){ if (e.key === "Escape") closePreview(); });
+
+document.getElementById("chips").addEventListener("click", function(e){
+  var b = e.target.closest(".chip");
+  if (!b) return;
+  document.querySelectorAll(".chip").forEach(function(c){ c.classList.remove("active"); });
+  b.classList.add("active");
+  var f = b.getAttribute("data-filter");
+  document.querySelectorAll(".card").forEach(function(card){
+    card.style.display = (f === "all" || card.getAttribute("data-cat") === f) ? "" : "none";
+  });
+});
+
+var btn = document.getElementById("themeBtn");
+function applyTheme(dark){
+  document.body.classList.toggle("dark", dark);
+  btn.textContent = dark ? "Light mode" : "Dark mode";
+}
+var saved = null;
+try { saved = localStorage.getItem("devpf-theme"); } catch (e) {}
+if (saved === "dark") applyTheme(true);
+else if (saved === "light") applyTheme(false);
+else applyTheme(window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches);
+btn.addEventListener("click", function(){
+  var dark = !document.body.classList.contains("dark");
+  applyTheme(dark);
+  try { localStorage.setItem("devpf-theme", dark ? "dark" : "light"); } catch (e) {}
+});
+</script>
+</body>
+</html>
